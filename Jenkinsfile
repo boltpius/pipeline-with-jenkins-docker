@@ -23,7 +23,7 @@ pipeline {
             steps {
                  //sh 'docker login -u $DOCKERHUB_CREDS_USR -p $DOCKERHUB_CREDS_PSW' (this will leave the password visible)
                  // using the one below instead of the above wont make the password show in the logs of the jobs and the  one below is best practice
-                sh'echo $DOCKERHUB_CREDS_PSW | docker login -u $DOCKERHUB_CREDS_USR --password-stdin'
+                sh'echo $DOCKERHUB_CRED_PSW | docker login -u $DOCKERHUB_CRED_USR --password-stdin'
             }
         }
         stage('Docker Push') {
