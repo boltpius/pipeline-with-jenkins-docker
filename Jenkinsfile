@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment{
+    // list all environment variables with jenkins <jenkinsurl>/env-vars.html 
     DOCKERHUB_CRED = credentials('dockerhub')
 }
  
